@@ -5,12 +5,17 @@ const cors = require('cors');
 app.use(cors());
 
 const port = process.env.PORT || 4000;
+
  const courceData = require('./data/webCors.json')
 
  app.get('/', (req, res) =>{
   res.send(courceData)
  })
- app.get('/cours/:id', (req, res) => {
+ app.get('/course', (req, res) =>{
+  res.send(courceData)
+ })
+ 
+ app.get('/course/:id', (req, res) => {
   const id =parseInt(req.params.id);
   const singleCours = courceData.find(cdt => cdt.id === id)
   res.send(singleCours)
