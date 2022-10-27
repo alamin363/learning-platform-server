@@ -19,7 +19,7 @@ const port = process.env.PORT || 4000;
   const id =parseInt(req.params.id);
   const singleCours = courceData.find(cdt => cdt.id === id)
   res.send(singleCours)
- })
+ });
  app.listen(port, ()=>{
   console.log('api is running now', port)
  })
