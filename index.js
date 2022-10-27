@@ -10,10 +10,10 @@ const port = process.env.PORT || 4000;
 
  app.get('/', (req, res) =>{
   res.send(courceData)
- })
+ });
  app.get('/course', (req, res) =>{
   res.send(courceData)
- })
+ });
  
  app.get('/course/:id', (req, res) => {
   const id =parseInt(req.params.id);
@@ -23,3 +23,4 @@ const port = process.env.PORT || 4000;
  app.listen(port, ()=>{
   console.log('api is running now', port)
  })
+
